@@ -100,6 +100,11 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link " href="{{ url('pasien') }}">
+              <i class="ni ni-single-02 text-blue"></i> Pasien
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link " href="{{ url('pembayaran') }}">
               <i class="ni ni-collection text-yellow"></i> Pembayaran
             </a>

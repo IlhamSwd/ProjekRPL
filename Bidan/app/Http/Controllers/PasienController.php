@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Anggota;
+use App\Models\Pasien;
 use Illuminate\Http\Request;
 
-class AnggotaController extends Controller
+
+class PasienController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $anggota = Anggota::all();
-        return view('anggota.index')
-                ->with('anggota', $anggota);
+        $pasien = Pasien::all();
+        return view('pasien.index')
+                ->with('pasien', $pasien);
     }
 
     /**
@@ -22,7 +23,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('anggota.create');
+        return view('pasien.create');
     }
 
     /**
@@ -31,34 +32,33 @@ class AnggotaController extends Controller
     public function store(Request $request)
     {
         $val = $request->validate([
-            'url_anggota'=> 'required|file|mimes:jpeg,png|max:5000',
+            'url_pasien' => 'required|file|mimes:jpeg,png|max:5000',
             'nama' => 'required|max:50',
             'jenis_kelamin' => 'required|max:50',
             'nomor_hp' => 'required|max:50',
             'alamat' => 'required|max:50',
             'tempat_lahir' => 'required|max:50',
             'tgl_lahir' => 'required|max:50',
-            'pekerjaan' => 'required|max:50'
-
+            'keluhan' => 'required|max:50'
         ]);
-          // ekstensi file yang di upload
-          $ext = $request->url_anggota->getClientOriginalExtension();
-          // rename misal : npm.extensi 2226240152s
-          $val['url_anggota'] = $request->nama.".".$ext;
-          //upload ke dalam folder public/foto
-          $request->url_anggota->move('fotoanggota/', $val['url_anggota']);
+         // ekstensi file yang di upload
+         $ext = $request->url_pasien->getClientOriginalExtension();
+         // rename misal : npm.extensi 2226240152.png
+         $val['url_pasien'] = $request->nama.".".$ext;
+         //upload ke dalam folder public/foto
+         $request->url_pasien->move('fotopasien/', $val['url_pasien']);
  
-         // simpan tabel fakultas
-         Anggota::create($val);
- 
-         // // radirect ke halaman list fakultas
-         return redirect()->route('anggota.index')->with('success', $val['nama']. ' berhasil disimpan');
+         // simpan tabel 
+         Pasien::create($val);
+            
+         // // redirect ke halaman
+         return redirect()->route('pasien.index')->with('success', $val['nama']. ' berhasil disimpan');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Anggota $anggota)
+    public function show(Pasien $pasien)
     {
         //
     }
@@ -66,60 +66,59 @@ class AnggotaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Anggota $anggota)
+    public function edit(Pasien $pasien)
     {
-        return view('anggota.edit')->with('anggota', $anggota);
+        return view('pasien.edit')->with('pasien', $pasien);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Anggota $anggota)
+    public function update(Request $request, Pasien $pasien)
     {
-        if ($request->url_anggota){
+        if ($request->url_pasien){
             $val = $request->validate([
-                'url_anggota'=> 'required|file|mimes:jpeg,png|max:5000',
+                'url_pasien' => 'required|file|mimes:jpeg,png|max:5000',
                 'nama' => 'required|max:50',
                 'jenis_kelamin' => 'required|max:50',
                 'nomor_hp' => 'required|max:50',
                 'alamat' => 'required|max:50',
                 'tempat_lahir' => 'required|max:50',
                 'tgl_lahir' => 'required|max:50',
-                'pekerjaan' => 'required|max:50'
-
+                'keluhan' => 'required|max:50'
             ]);
              // ekstensi file yang di upload
-             $ext = $request->url_anggota->getClientOriginalExtension();
+             $ext = $request->url_pasien->getClientOriginalExtension();
              // rename misal : npm.extensi 2226240152.png
-             $val['url_anggota'] = $request->nama.".".$ext;
+             $val['url_pasien'] = $request->nama.".".$ext;
              //upload ke dalam folder public/foto
-             $request->url_anggota->move('fotoanggota/', $val['url_anggota']);
+             $request->url_pasien->move('fotopasien/', $val['url_pasien']);
         }else{
             $val = $request->validate([
-                // 'url_anggota'=> 'required|file|mimes:jpeg,png|max:5000',
+                // 'url_pasien' => 'required|file|mimes:jpeg,png|max:5000',
                 'nama' => 'required|max:50',
                 'jenis_kelamin' => 'required|max:50',
                 'nomor_hp' => 'required|max:50',
                 'alamat' => 'required|max:50',
                 'tempat_lahir' => 'required|max:50',
                 'tgl_lahir' => 'required|max:50',
-                'pekerjaan' => 'required|max:50'
-
+                'keluhan' => 'required|max:50'
             ]);
         }
         //simpan tabel montir
-            Anggota::where('id', $anggota['id'])->update($val);
+            // $pasien = Pasien::find($montir);
+            Pasien::where('id', $pasien['id'])->update($val);
 
             //redirect ke halaman list montir
-            return redirect()->route('anggota.index')->with('success', $val['nama']. ' berhasil diubah');
+            return redirect()->route('pasien.index')->with('success', $val['nama']. ' berhasil diubah');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Anggota $anggota)
+    public function destroy(Pasien $pasien)
     {
-        $anggota->DELETE();
-        return redirect()->route('anggota.index')->with('success', 'berhasil di Hapus');
+        $pasien->DELETE();
+        return redirect()->route('pasien.index')->with('success', 'berhasil di Hapus');
     }
 }

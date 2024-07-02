@@ -20,17 +20,20 @@
                 <th class="text-center">Data Obat</th>
                 <th class="text-center">Tanggal Kadaluarsa</th>
                 <th class="text-center">Keterangan</th>
+                <th class="text-center">Harga</th>
                 <th class="text-center">Aksi</th>
               </tr>
             </thead>
-            {{-- <tbody>
+            <tbody>
               @foreach ($stok as $item)
                 <tr>
-                  <td class="text-center">{{ $item['kode_barang'] }}</td>
-                  <td class="text-center">{{ $item['nama_barang'] }}</td>
-                  <td class="text-center">{{ $item['stok_barang'] }}</td>
-                  <td class="text-center">{{ $item['produk'] }}</td>
-                  <td class="text-center">{{ $item['harga_satuan'] }}</td>
+                  <td class="text-center">{{ $item['kode'] }}</td>
+                  <td class="text-center">{{ $item['nama'] }}</td>
+                  <td class="text-center">{{ $item['jumlah'] }}</td>
+                  <td class="text-center">{{ $item['data_obat'] }}</td>
+                  <td class="text-center">{{ $item['tgl_kadaluarsa'] }}</td>
+                  <td class="text-center">{{ $item['keterangan'] }}</td>
+                  <td class="text-center">{{ $item['harga'] }}</td>
                   <td class="text-center">
                     <a href="{{ route('stok.edit', $item['id']) }}" class="btn btn-rounded btn-warning">
                       <i class="menu-icon mdi mdi-pencil"></i>
@@ -47,7 +50,7 @@
                   </td>
                 </tr>
               @endforeach
-            </tbody> --}}
+            </tbody>
           </table>
         </div>
       </div>

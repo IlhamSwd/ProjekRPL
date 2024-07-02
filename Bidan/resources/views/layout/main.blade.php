@@ -25,7 +25,7 @@
       </button>
       <!-- Brand -->
       <a class="navbar-brand pt-0" href="{{ url('index.html') }}">
-        <img src="{{ url('assets/img/brand/blue.png') }}" class="navbar-brand-img" alt="...">
+        <img src="{{ url('assets/img/brand/logo.jpg') }}" class="navbar-brand-img" alt="...">
       </a>
       <!-- User -->
       <ul class="nav align-items-center d-md-none">
@@ -33,12 +33,6 @@
           <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="ni ni-bell-55"></i>
           </a>
-          {{-- <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div> --}}
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link" href="{{ url('#') }}" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -85,7 +79,7 @@
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  active ">
-            <a class="nav-link  active " href="{{ url('index.html') }}">
+            <a class="nav-link  active " href="{{ url('dashboard') }}">
               <i class="ni ni-tv-2 text-primary"></i> Dashboard
             </a>
           </li>
@@ -97,7 +91,7 @@
           <li class="nav-item">
             <a class="nav-link " href="{{ url('anggota') }}">
               <i class="ni ni-single-02 text-yellow"></i> Anggota
-            </a>
+            </a>  
           </li>
           <li class="nav-item">
             <a class="nav-link " href="{{ url('pasien') }}">
@@ -105,13 +99,8 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="{{ url('pembayaran') }}">
-              <i class="ni ni-collection text-yellow"></i> Pembayaran
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="{{ url('riwayat') }}">
-              <i class="ni ni-collection text-yellow"></i> Riwayat Servis
+            <a class="nav-link " href="{{ url('transaksi') }}">
+              <i class="ni ni-collection text-yellow"></i> Transaksi
             </a>
           </li>
         </ul>
@@ -124,8 +113,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
       <div class="container-fluid">
-        <!-- Brand -->
-        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
+        {{-- <!-- Brand -->
+        <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="{{ url('index.html') }}">WELCOME</a> --}}
 
         <!-- Form -->
         <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
@@ -147,7 +136,7 @@
                   <img alt="Image placeholder" src="{{ url('assets/img/theme/team-4-800x800.jpg') }}">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">Rismanto</span>
+                  <span class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
                 </div>
               </div>
             </a>
@@ -159,10 +148,17 @@
                 <i class="ni ni-single-02"></i>
                 <span>My profile</span>
               </a>
-              <div class="dropdown-divider"></div>
-              <a href="{{ url('#!') }}" class="dropdown-item">
-                <i class="ni ni-user-run"></i>
-                <span>Logout</span>
+              <!-- Authentication -->
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <x-responsive-nav-link :href="route('logout')"
+                    onclick="event.preventDefault();
+                  this.closest('form').submit();"
+                    class="dropdown-item">
+                    <i class="mdi mdi-logout text-primary"></i> {{ __('Log Out') }}
+                </x-responsive-nav-link>
+              </form>
               </a>
             </div>
           </li>

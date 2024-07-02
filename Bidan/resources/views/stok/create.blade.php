@@ -12,41 +12,54 @@
                         <form method="POST" action="{{ route('stok.store') }}">
                             @csrf
                             <div class="form-group">
-                                <label for="kode_barang" class="form-label text-dark">Kode Obat</label>
-                                <input type="text" class="form-control" id="kode_barang" name='kode_barang' placeholder="Masukan kode barang"/>
-                                @Error('kode_barang')
+                                <label for="kode" class="form-label text-dark">Kode Obat</label>
+                                <input type="text" class="form-control" id="kode" name='kode' placeholder="Masukan kode obat"/>
+                                @Error('kode')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="nama_barang" class="form-label text-dark">Nama Obat</label>
-                                <input type="text" class="form-control" id="nama_barang" name='nama_barang'placeholder="Masukan Nama barang"/>
-                                @Error('nama_barang')
+                                <label for="nama" class="form-label text-dark">Nama Obat</label>
+                                <input type="text" class="form-control" id="nama" name='nama'placeholder="Masukan Nama obat"/>
+                                @Error('nama')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="stok_barang" class="form-label text-dark">Jumlah</label>
-                                <input type="number" class="form-control" id="stok_barang" name='stok_barang' placeholder="Masukan Stok barang"/>
-                                @Error('stok_barang')
+                                <label for="jumlah" class="form-label text-dark">Jumlah</label>
+                                <input type="number" class="form-control" id="jumlah" name='jumlah' placeholder="Masukan jumlah obat"/>
+                                @Error('jumlah')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="produk" class="form-label text-dark">Produk Barang</label>
-                                <select class="form-control" id="produk" name='produk' placeholder="masukan produk barang">
-                                    <option value="Honda">Honda</option>
-                                    <option value="Yamaha">Yamaha</option>
+                                <label for="data_obat" class="form-label text-dark">Data Obat</label>
+                                <select class="form-control" id="data_obat" name='data_obat'>
+                                    <option value="Obat Masuk">Obat Masuk</option>
                                 </select>
-                                @Error('produk')
+                                @Error('data_obat')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="harga_satuan" class="form-label text-dark">Harga Satuan</label>
-                                <input type="number" class="form-control" id="harga_satuan" name="harga_satuan" placeholder="Masukan harga" />
-                                @Error('harga_satuan')
-                                    <span class="text-danger">{{$message}}</span>
+                                <label for="tgl_kadaluarsa" class="form-label text-dark">Tanggal Kadaluarsa</label>
+                                <input type="date" class="form-control" id="tgl_kadaluarsa" name='tgl_kadaluarsa' placeholder="Masukan tanggal kadaluarsa"/>
+                                @Error('tgl_kadaluarsa')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="keterangan" class="form-label text-dark">Keterangan</label>
+                                <input type="text" class="form-control" id="keterangan" name='keterangan' placeholder="Masukan keterangan"/>
+                                @Error('pekerjaan')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="harga" class="form-label text-dark">Harga</label>
+                                <input type="number" class="form-control" id="harga" name='harga' placeholder="Masukan harga"/>
+                                @Error('harga')
+                                    <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <button type="submit" class="btn btn-dark">Simpan</button>

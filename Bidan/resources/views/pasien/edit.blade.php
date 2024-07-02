@@ -21,7 +21,7 @@
                         </div>
                         <div class="form-group">
                             <label for="jenis_kelamin" class="form-label text-dark">Jenis kelamin</label>
-                            <select class="form-control" id="jenis_kelamin" name='jenis_kelamin' value="{{ old('nama') ? old('jenis_kelamin') : $pasien["jenis_kelamin"] }}" placeholder="Masukan jenis kelamin">
+                            <select class="form-control" id="jenis_kelamin" name='jenis_kelamin' value="{{ old('jenis_kelamin') ? old('jenis_kelamin') : $pasien["jenis_kelamin"] }}" placeholder="Masukan jenis kelamin">
                                 <option value="Laki-Laki">Laki-Laki</option>
                                 <option value="Perempuan">Perempuan</option>
                             </select>

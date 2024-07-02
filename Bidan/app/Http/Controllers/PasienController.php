@@ -31,6 +31,10 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
+        if ($request->user()->cannot('create', Pasien::class)) {
+            abort(403);
+        }
         $val = $request->validate([
             'url_pasien' => 'required|file|mimes:jpeg,png|max:5000',
             'nama' => 'required|max:50',

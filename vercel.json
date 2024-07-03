@@ -14,8 +14,8 @@
             "dest": "/public/assets/css/"
         },
         {
-            "src": "/assets/font/(.*)",
-            "dest": "/public/assets/font/"
+            "src": "/assets/fonts/(.*)",
+            "dest": "/public/assets/fonts/"
         },
         {
             "src": "/assets/img/(.*)",

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>login</title>
+    <title>Login</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{{ url('site.webmanifest')}}">
@@ -42,7 +42,7 @@
 
 <main class="login-body" data-vide-bg="assets/img/login-bg.mp4">
     <!-- Login Admin -->
-    <form class="form-default" action="login-bg.mp4" method="POST" action="{{ route('login') }}">
+    <form class="form-default" method="POST" action="{{ route('login') }}">
         @csrf
         <div class="login-form">
             <!-- logo-login -->

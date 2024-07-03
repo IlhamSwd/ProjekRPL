@@ -136,7 +136,7 @@
                   <img alt="Image placeholder" src="{{ url('assets/img/theme/team-4-800x800.jpg') }}">
                 </span>
                 <div class="media-body ml-2 d-none d-lg-block">
-                  <span class="mb-0 text-sm  font-weight-bold">{{ auth()->user()->name }}</span>
+                  <span class="mb-0 text-sm  font-weight-bold"> {{ auth()->user()->name }}</span>
                 </div>
               </div>
             </a>

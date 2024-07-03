@@ -51,7 +51,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href={{ url('index.html') }}><img src="{{ url('assets/img/logo/logo.png') }}"
+                                    <a href={{ url('index.html') }}><img src=""
                                             alt=""></a>
                                 </div>
                             </div>
@@ -88,16 +88,8 @@
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".6s ">Website Aplikasi Bidan</h1>
                                     <p data-animation="fadeInLeft" data-delay=".8s">
-                                        Supercharge your WordPress hosting
-                                        with detailed
-                                        website analytics, marketing tools, security, and data
-                                        backups all in one place.</p>
-                                    <!-- Slider btn -->
-                                    <div class="slider-btns">
-                                        <!-- Hero-btn -->
-                                        <a data-animation="fadeInLeft" data-delay="1s"
-                                            href="{{ url('industries.html') }}" class="btn radius-btn">get started</a>
-                                    </div>
+                                        Aplikasi ini adalah buatan dari kami mahasiswa
+                                        Universitas Multi Data Palembang.</p>
                                 </div>
                             </div>
                             <div class="col-xl-6 col-lg-6">
@@ -116,185 +108,7 @@
             </div>
         </div>
         <!-- Pricing Card End -->
-        <!--? Testimonial Area Start -->
-        <section class="testimonial-area section-bg1">
-            <div class="container">
-                <div class="testimonial-wrapper">
-                    <div class="row align-items-center justify-content-center">
-                        <div class=" col-lg-10 col-md-12 col-sm-11">
-                            <!-- Testimonial Start -->
-                            <div class="h1-testimonial-active">
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial text-center mt-55">
-                                    <div class="testimonial-caption">
-                                        <img src="{{ url('assets/img/icon/quotes-sign.png') }}" alt=""
-                                            class="quotes-sign">
-                                        <p>Brook presents your services with flexible, convenient and cdpose layouts.
-                                            You can select your favorite layouts & elements for cular ts with unlimited
-                                            ustomization possibilities. Pixel-perfect replica;ition of thei designers
-                                            ijtls intended csents your se.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                        <div class="founder-img">
-                                            <img src="{{ url('assets/img/icon/testimonial.png') }}" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Jacson Miller</span>
-                                            <p>Designer @Colorlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Single Testimonial -->
-                                <div class="single-testimonial text-center mt-55"">
-                                    <div class="testimonial-caption">
-                                        <img src="{{ url('assets/img/icon/quotes-sign.png') }}" alt=""
-                                            class="quotes-sign">
-                                        <p>Brook presents your services with flexible, convenient and cdpose layouts.
-                                            You can select your favorite layouts & elements for cular ts with unlimited
-                                            ustomization possibilities. Pixel-perfect replica;ition of thei designers
-                                            ijtls intended csents your se.</p>
-                                    </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                        <div class="founder-img">
-                                            <img src="{{ url('assets/img/icon/testimonial.png') }}" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Jacson Miller</span>
-                                            <p>Designer @Colorlib</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Testimonial End -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--? Testimonial Area End -->
     </main>
-    <footer>
-        <div class="footer-wrappr " data-background="{{ url('assets/img/gallery/footer-bg.png') }}">
-            <div class="footer-area footer-padding ">
-                <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-footer-caption mb-50">
-                                <!-- logo -->
-                                <div class="footer-logo mb-25">
-                                    <a href="{{ url('index.html') }}"><img src="{{ url('assets/img/logo/logo2_footer.png') }}"
-                                            alt=""></a>
-                                </div>
-                                <div class="footer-tittle mb-50">
-                                    <p>Subscribe our newsletter to get updates about our services</p>
-                                </div>
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank"
-                                            action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                            method="get" class="subscribe_form relative mail_part"
-                                            novalidate="true">
-                                            <input type="email" name="EMAIL" id="newsletter-form-email"
-                                                placeholder=" Email Address " class="placeholder hide-on-focus"
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Your email address'">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit"
-                                                    class="email_icon newsletter-submit button-contactForm">
-                                                    Subscribe
-                                                </button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- social -->
-                                <div class="footer-social mt-50">
-                                    <a href="{{ url('#') }}"><i class="fab fa-twitter"></i></a>
-                                    <a href="{{ url('https://bit.ly/sai4ull') }}"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="{{ url('#') }}"><i class="fab fa-pinterest-p"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        {{-- <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Company</h4>
-                                <ul>
-                                    <li><a href="#">Why choose us</a></li>
-                                    <li><a href="#"> Review</a></li>
-                                    <li><a href="#">Customers</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Carrier</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Products</h4>
-                                <ul>
-                                    <li><a href="#">Why choose us</a></li>
-                                    <li><a href="#"> Review</a></li>
-                                    <li><a href="#">Customers</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Carrier</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Support</h4>
-                                <ul>
-                                    <li><a href="#">Technology</a></li>
-                                    <li><a href="#">  Products</a></li>
-                                    <li><a href="#">Customers</a></li>
-                                    <li><a href="#">Quality</a></li>
-                                    <li><a href="#">Sales geography</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> --}}
-                    </div>
-                </div>
-            </div>
-            <!-- footer-bottom area -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="footer-copy-right text-center">
-                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;
-                                        <script>
-                                            document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This template is made with <i
-                                            class="fa fa-heart" aria-hidden="true"></i> by <a
-                                            href="{{ url('https://colorlib.com') }}" target="_blank">Colorlib</a>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll Up -->
-    <div id="back-top">
-        <a title="Go to Top" href="{{ url('#') }}"> <i class="fas fa-level-up-alt"></i></a>
-    </div>
-
     <!-- JS here -->
 
     <script src="{{ url('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>

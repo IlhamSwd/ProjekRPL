@@ -44,7 +44,7 @@
 
     <!-- Register -->
 
-    <main class="login-body" data-vide-bg="assets/img/login-bg.mp4">
+    <main class="login-body" data-vide-bg="{{ url('assets/img/login-bg.mp4') }}">
         <!-- Login Admin -->
         <form class="form-default" action="login-bg.mp4" method="POST">
 
@@ -90,8 +90,6 @@
     <!-- Jquery Mobile Menu -->
     <script src="{{ url('assets/js/jquery.slicknav.min.js') }}"></script>
 
-    <!-- Video bg -->
-    <script src="{{ url('assets/js/jquery.vide.js') }}"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="{{ url('assets/js/owl.carousel.min.js') }}"></script>

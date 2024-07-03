@@ -40,7 +40,7 @@
     <!-- Preloader Start-->
 
 
-<main class="login-body" data-vide-bg="assets/img/login-bg.mp4">
+<main class="login-body" data-vide-bg="{{ url('assets/img/login-bg.mp4') }}">
     <!-- Login Admin -->
     <form class="form-default" method="POST" action="{{ route('login') }}">
         @csrf
@@ -71,7 +71,7 @@
             <!-- Forget Password -->
             <a href="#" class="forget">Forget Password</a>
             <!-- Forget Password -->
-            <a href="{{ url('register.html') }}" class="registration">Registration</a>
+            <a href="{{ route('register') }}" class="registration">Registration</a>
         </div>
     </form>
     <!-- /end login form -->
@@ -85,9 +85,6 @@
     <script src="{{ url('assets/js/bootstrap.min.js') }}"></script>
     <!-- Jquery Mobile Menu -->
     <script src="{{ url('assets/js/jquery.slicknav.min.js') }}"></script>
-
-    <!-- Video bg -->
-    <script src="{{ url('assets/js/jquery.vide.js') }}"></script>
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="{{ url('assets/js/owl.carousel.min.js') }}"></script>

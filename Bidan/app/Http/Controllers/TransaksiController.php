@@ -94,8 +94,9 @@ class TransaksiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Transaksi $transaksi)
+    public function destroy($transaksi)
     {
+        $transaksi = Transaksi::find($transaksi);
         $transaksi->delete();
         return redirect()->route('transaksi.index')->with('success', 'berhasil di Hapus');
     }

@@ -92,8 +92,9 @@ class StokController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Stok $stok)
+    public function destroy($stok)
     {
+        $stok = Stok::find($stok);
         $stok->DELETE();
         return redirect()->route('stok.index')->with('success', 'berhasil di Hapus');
     }

@@ -14,6 +14,9 @@
                             <div class="form-group">
                                 <label for="nama" class="form-label text-dark">Nama</label>
                                 <input type="text" class="form-control" id="nama" name='nama' placeholder="masukan nama"/>
+                                @Error('nama')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="jenis_kelamin" class="form-label text-dark">Jenis Kelamin</label>

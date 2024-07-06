@@ -100,4 +100,4 @@ class TransaksiController extends Controller
         $transaksi->delete();
         return redirect()->route('transaksi.index')->with('success', 'berhasil di Hapus');
     }
-}
+}   
